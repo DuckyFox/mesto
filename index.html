@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Mesto</title>
+  <script async src="./scripts/script.js"></script>
+</head>
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="Место">
+  </header>
+
+  <main class="content">
+    <section class="profile">
+      <div class="profile__left">
+        <img class="profile__avatar" src="./images/Jak.jpg" alt="Жак-Ив">
+        <div class="profile__info">
+          <div class="profile__edit-button-shell">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button"></button>
+          </div>
+          <p class="profile__profession">Исследователь океана</p>
+        </div>
+      </div>
+      <button class="profile__add-button"></button>
+    </section>
+    
+    <section class="places-grid">
+      <div class="places-grid__element">
+        <img class="places-grid__photo" src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия">
+        <div class="places-grid__text">
+          <h3 class="places-grid__name">Карачаево-Черкессия</h3>
+          <button class="places-grid__nolike"></button>
+        </div>
+      </div>
+      <div class="places-grid__element">
+        <img class="places-grid__photo" src="./images/elbrus.jpg" alt="Гора Эльбрус">
+        <div class="places-grid__text">
+          <h3 class="places-grid__name">Гора Эльбрус</h3>
+          <button class="places-grid__nolike"></button>
+        </div>
+      </div>
+      <div class="places-grid__element">
+        <img class="places-grid__photo" src="./images/dombai.jpg" alt="Домбай">
+        <div class="places-grid__text">
+          <h3 class="places-grid__name">Домбай</h3>
+          <button class="places-grid__nolike"></button>
+        </div>
+      </div>
+      <div class="places-grid__element">
+        <img class="places-grid__photo" src="./images/elbrus.jpg" alt="Гора Эльбрус">
+        <div class="places-grid__text">
+          <h3 class="places-grid__name">Гора Эльбрус</h3>
+          <button class="places-grid__nolike"></button>
+        </div>
+      </div>
+      <div class="places-grid__element">
+        <img class="places-grid__photo" src="./images/dombai.jpg" alt="Домбай">
+        <div class="places-grid__text">
+          <h3 class="places-grid__name">Домбай</h3>
+          <button class="places-grid__nolike"></button>
+        </div>
+      </div>
+      <div class="places-grid__element">
+        <img class="places-grid__photo" src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия">
+        <div class="places-grid__text">
+          <h3 class="places-grid__name">Карачаево-Черкессия</h3>
+          <button class="places-grid__nolike"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+  </footer>
+
+  <div class="popup">
+    <div class="popup__container">
+      <button class="popup__close-button"></button>
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form class="popup__form">
+        <label class="popup__label" for="name"></label>
+        <input value="Жак-Ив Кусто" class="popup__input popup__input_type_name" type="text" name="name" id="name" placeholder="Имя">
+        <label class="popup__label" for="job"></label>
+        <input value="Исследователь океана" class="popup__input popup__input_type_job" type="text" name="job" id="job" placeholder="Род деятельности">
+        <button class="popup__save-bottom">Сохранить</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

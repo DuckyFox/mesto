@@ -1,0 +1,7 @@
+.places-grid__element{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  border-radius: 5%;
+}

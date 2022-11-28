@@ -1,0 +1,8 @@
+.places-grid__text{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 25px;
+  margin-left: 21px;
+  margin-right: 20px;
+}

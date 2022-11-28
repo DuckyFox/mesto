@@ -1,0 +1,6 @@
+.page{
+  background-color: #000000;
+  font-family: 'Inter', sans-serif;
+  z-index: 1;
+  overflow-x: hidden;
+}

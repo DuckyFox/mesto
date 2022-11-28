@@ -1,0 +1,13 @@
+.profile__left{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .profile__left{
+    max-width: 581px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
