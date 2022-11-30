@@ -5,17 +5,22 @@
   margin-top: 22px;
   display: flex;
   flex-direction: column;
+  max-width: 400px;
+  flex: 1;
 }
 
 @media screen and (max-width: 900px) {
   .profile__info{
     margin: 0 auto;
     margin-top: 22px;
+    flex: 1;
   }
 }
 
 @media screen and (max-width: 581px) {
   .profile__info{
     margin-top: 26px;
+    flex: 1;
+    max-width: 400px;
   }
 }
