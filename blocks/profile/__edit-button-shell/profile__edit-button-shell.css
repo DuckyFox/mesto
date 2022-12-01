@@ -4,3 +4,16 @@
   display: flex;
   flex-direction: row;
 }
+
+@media screen and (max-width: 900px) {
+  .profile__edit-button-shell{
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  .profile__edit-button-shell{
+    align-self: unset;
+    margin-left: 46px;
+  }
+}
