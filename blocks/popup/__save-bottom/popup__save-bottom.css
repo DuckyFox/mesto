@@ -8,6 +8,10 @@
   color: white;
   background-color: black;
   border-radius: 2px;
+  font-size: 18px;
+  line-height: 21.78px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .popup__save-bottom:hover{
@@ -23,5 +27,7 @@
     height: 100%;
     margin-top: 45px;
     margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 16.94px;
   }
 }
