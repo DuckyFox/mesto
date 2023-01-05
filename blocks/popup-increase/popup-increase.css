@@ -1,4 +1,4 @@
-.popup{
+.popup-increase{
   visibility: hidden;
   display: flex;
   position: fixed;
@@ -12,6 +12,4 @@
   background-color: rgba(0,0,0,0.4);
   justify-content: space-around;
   align-items: center;
-  opacity: 0;
-  transition: opacity .5s linear;
 }

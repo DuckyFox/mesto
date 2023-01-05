@@ -1,0 +1,7 @@
+.popup-place__label{
+  margin: 0;
+}
+
+.popup-place__label:last-of-type{
+  margin-bottom: 30px;
+}

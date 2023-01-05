@@ -1,10 +1,10 @@
-.places-grid__name{
-  margin: 0;
-  padding: 0;
-  max-width: 190px;
+.card__title{
+  max-width: 198px;
+  color: #000000;
   font-size: 24px;
-  line-height: 29.05px;
   font-weight: 900;
+  line-height: 29.05px;
+  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
