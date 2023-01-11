@@ -34,7 +34,7 @@
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup_edit">
     <div class="popup__container">
       <button type="button" class="popup__close-button"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
@@ -48,32 +48,32 @@
     </div>
   </div>
 
-  <div class="popup-place">
-    <div class="popup-place__container">
-      <button type="button" class="popup-place__close-button"></button>
-      <h3 class="popup-place__title">Новое место</h3>
-      <form name="info" class="popup-place__form">
-        <label class="popup-place__label" for="name"></label>
-        <input class="popup-place__input popup-place__input_type_title" type="text" name="title" id="title" placeholder="Название">
-        <label class="popup-place__label" for="job"></label>
-        <input class="popup-place__input popup-place__input_type_link" type="text" name="place" id="place" placeholder="Ссылка на картинку">
-        <button type="submit" class="popup-place__save-bottom">Сохранить</button>
+  <div class="popup popup_image">
+    <div class="popup__container">
+      <button type="button" class="popup__close-button"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form name="image" class="popup__form">
+        <label class="popup__label" for="name"></label>
+        <input class="popup__input popup__input_type_title" type="text" name="title" id="title" placeholder="Название">
+        <label class="popup__label" for="job"></label>
+        <input class="popup__input popup__input_type_link" type="text" name="place" id="place" placeholder="Ссылка на картинку">
+        <button type="submit" class="popup__save-bottom">Сохранить</button>
       </form>
     </div>
   </div>
 
-  <div class="popup-increase">
-    <div class="popup-increase__shell">
-      <button class="popup-increase__close-button" type="button"></button>
-      <img class="popup-increase__image">
-      <p class="popup-increase__subtitle"></p>
+  <div class="popup popup_increase">
+    <div class="popup__shell">
+      <button class="popup__close-button_increase" type="button"></button>
+      <img src='' alt='' class="popup__image">
+      <p class="popup__subtitle"></p>
     </div>
   </div>
 
   <template id="place-template">
     <article class="card">
       <img class="card__photo">
-      <button class="card__delete"></button>
+      <button class="card__delete" type="button"></button>
       <div class="card__bottom">
         <h2 class="card__title"></h2>
         <button class="card__like-btn" type="button"></button>

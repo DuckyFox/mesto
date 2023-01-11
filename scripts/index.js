@@ -1,24 +1,23 @@
-let editButton = document.querySelector('.profile__edit-button');
-let popup = document.querySelector('.popup');
-let closeButton = document.querySelector('.popup__close-button');
-let formElement = document.querySelector('.popup__form')
-let nameInput = document.querySelector('.popup__input_type_name')
-let jobInput = document.querySelector('.popup__input_type_job')
-let profileName = document.querySelector('.profile__name');
-let profileJob = document.querySelector('.profile__profession');
+const editButton = document.querySelector('.profile__edit-button');
+const popupEdit = document.querySelector('.popup_edit');
+const closeButton = popupEdit.querySelector('.popup__close-button');
+const formEditElement = document.querySelector('.popup__form')
+const nameInput = document.querySelector('.popup__input_type_name')
+const jobInput = document.querySelector('.popup__input_type_job')
+const profileName = document.querySelector('.profile__name');
+const profileJob = document.querySelector('.profile__profession');
 
-const popupPlace = document.querySelector('.popup-place')
+const popupPlace = document.querySelector('.popup_image')
 const popupPlaceOpenButton = document.querySelector('.profile__add-button')
-const popupPlaceCloseButton = document.querySelector('.popup-place__close-button')
-const popupPlaceSaveButton = document.querySelector('.popup-place__save-bottom')
-const placeTitleInput = document.querySelector('.popup-place__input_type_title')
-const placeLinkInput = document.querySelector('.popup-place__input_type_link')
-const placeForm = document.querySelector('.popup-place__form')
+const popupPlaceCloseButton = popupPlace.querySelector('.popup__close-button')
+const placeTitleInput = document.querySelector('.popup__input_type_title')
+const placeLinkInput = document.querySelector('.popup__input_type_link')
+const placeForm = popupPlace.querySelector('.popup__form')
 
-const popupImageIncrease = document.querySelector('.popup-increase')
-const popupImageIncreasClose = document.querySelector('.popup-increase__close-button')
-const increasedImage = document.querySelector('.popup-increase__image')
-const increasedImageSubtitle = document.querySelector('.popup-increase__subtitle')
+const popupImageIncrease = document.querySelector('.popup_increase')
+const popupImageIncreasCloseButton = popupImageIncrease.querySelector('.popup__close-button_increase')
+const increasedImage = popupImageIncrease.querySelector('.popup__image')
+const increasedImageSubtitle = popupImageIncrease.querySelector('.popup__subtitle')
 
 const initialCards = [
   {
@@ -47,7 +46,7 @@ const initialCards = [
   }
 ]; 
 
-const cardsplace = document.querySelector('.places')
+const cardsPlace = document.querySelector('.places')
 const template = document.querySelector('#place-template')
 const place = template.content.querySelector('.card')
 
@@ -58,7 +57,7 @@ function addCard(info) {
   placeImage.src = info.link;
   placeImage.alt = `${info.name}.`;
   placeImage.addEventListener("click", () => {
-    popupIncreaseOpen(popupImageIncrease);
+    openPopup(popupImageIncrease);
     increasedImage.src = info.link;
     increasedImage.alt = `${info.name}.`;
     increasedImageSubtitle.textContent = info.name;
@@ -73,14 +72,14 @@ function addCard(info) {
 }
 
 const addPlaces = (info) => {
-  cardsplace.append(addCard(info));
+  cardsPlace.append(addCard(info));
 }
 
 initialCards.forEach((info) => {
   addPlaces(info);
 })
 
-function AddCardForm(evt) {
+function addCardForm(evt) {
   evt.preventDefault();
 
   const info = {
@@ -88,52 +87,49 @@ function AddCardForm(evt) {
     link: placeLinkInput.value,
   };
 
-  cardsplace.prepend(addCard(info));
+  cardsPlace.prepend(addCard(info));
 
-  popupPlaceClose();
+  closePopup(popupPlace);
 
   placeTitleInput.value = '';
   placeLinkInput.value = '';
 }
 
-placeForm.addEventListener("submit", AddCardForm);
-
-function popupOpen () {
-  popup.classList.add('popup_open');
-  nameInput.value=profileName.textContent;
-  jobInput.value=profileJob.textContent;
-}
-
-function popupClose (){
-  popup.classList.remove('popup_open');
-}
+placeForm.addEventListener("submit", addCardForm);
 
 function handleFormSubmit (evt) {
   evt.preventDefault(); 
   profileName.textContent=nameInput.value;
   profileJob.textContent=jobInput.value;
-  popupClose();
+  closePopup(popupEdit);
 }
 
-function popupPlaceOpen (){
-  popupPlace.classList.add('popupPlace__open');
+function openPopup(popup) {
+  popup.classList.add("popup_open");
 }
 
-function popupPlaceClose (){
-  popupPlace.classList.remove('popupPlace__open');
+function closePopup(popup) {
+  popup.classList.remove("popup_open");
+  console.log()
 }
 
-function popupIncreaseOpen (){
-  popupImageIncrease.classList.add('popup-increase__open')
-}
+formEditElement.addEventListener('submit', handleFormSubmit); 
+editButton.addEventListener('click', () => {
+  openPopup(popupEdit);
+  nameInput.value=profileName.textContent;
+  jobInput.value=profileJob.textContent;
+})
+closeButton.addEventListener('click', () => {
+  closePopup(popupEdit)
+})
+popupPlaceOpenButton.addEventListener('click', () => {
+  openPopup(popupPlace);
+})
+popupPlaceCloseButton.addEventListener('click', () => {
+  closePopup(popupPlace);
+})
+popupImageIncreasCloseButton.addEventListener('click', () => {
+  closePopup(popupImageIncrease);
+})
 
-function popupIncreaseClose (){
-  popupImageIncrease.classList.remove('popup-increase__open')
-}
 
-editButton.addEventListener('click', popupOpen);
-closeButton.addEventListener('click', popupClose);
-formElement.addEventListener('submit', handleFormSubmit); 
-popupPlaceOpenButton.addEventListener('click', popupPlaceOpen)
-popupPlaceCloseButton.addEventListener('click', popupPlaceClose)
-popupImageIncreasClose.addEventListener('click', popupIncreaseClose)
