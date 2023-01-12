@@ -1,5 +1,5 @@
 const editButton = document.querySelector('.profile__edit-button');
-const popupEdit = document.querySelector('.popup_edit');
+const popupEdit = document.querySelector('.popup_type_edit');
 const closeButton = popupEdit.querySelector('.popup__close-button');
 const formEditElement = document.querySelector('.popup__form')
 const nameInput = document.querySelector('.popup__input_type_name')
@@ -7,15 +7,15 @@ const jobInput = document.querySelector('.popup__input_type_job')
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__profession');
 
-const popupPlace = document.querySelector('.popup_image')
+const popupPlace = document.querySelector('.popup_type_image')
 const popupPlaceOpenButton = document.querySelector('.profile__add-button')
 const popupPlaceCloseButton = popupPlace.querySelector('.popup__close-button')
 const placeTitleInput = document.querySelector('.popup__input_type_title')
 const placeLinkInput = document.querySelector('.popup__input_type_link')
 const placeForm = popupPlace.querySelector('.popup__form')
 
-const popupImageIncrease = document.querySelector('.popup_increase')
-const popupImageIncreasCloseButton = popupImageIncrease.querySelector('.popup__close-button_increase')
+const popupImageIncrease = document.querySelector('.popup_type_increase')
+const popupImageIncreasCloseButton = popupImageIncrease.querySelector('.popup__close-button-increase')
 const increasedImage = popupImageIncrease.querySelector('.popup__image')
 const increasedImageSubtitle = popupImageIncrease.querySelector('.popup__subtitle')
 

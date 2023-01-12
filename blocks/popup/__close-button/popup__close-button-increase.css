@@ -13,13 +13,13 @@
   cursor: pointer;
 }
 
-.popup__close-button_increase:hover {
+.popup__close-button-increase:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width:535px) {
-  .popup__close-button_increase {
+  .popup__close-button-increase {
     top: -36px;
     right: 0;
     width: 25px;
@@ -28,7 +28,7 @@
 }
 
 @media screen and (max-width:320px) {
-  .popup__close-button_increase {
+  .popup__close-button-increase {
     width: 20px;
     height: 20px;
   }
